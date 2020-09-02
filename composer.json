@@ -1,0 +1,29 @@
+{
+    "name": "valeryan/plugin-example",
+    "type": "project",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Samuel Hilson",
+            "email": "samrhilson@gmail.com"
+        }
+    ],
+    "require": {
+        "wikimedia/composer-merge-plugin": "^1.4"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.5",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+        "wp-coding-standards/wpcs": "*"
+    },
+    "extra": {
+		"merge-plugin": {
+			"include": [
+                "wp-content/composer.json",
+				"wp-content/plugins/*/composer.json"
+			],
+			"merge-dev": false,
+			"merge-extra": true
+		}
+	}
+}
